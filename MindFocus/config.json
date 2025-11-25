@@ -1,0 +1,72 @@
+{
+  "categories": [
+    {
+      "id": "estudo",
+      "label": "📚 Estudo",
+      "xp": 15,
+      "keywords": ["estudar", "revisar", "prova", "exercício", "cálculo", "matemática", "física", "português", "resumo"]
+    },
+    {
+      "id": "trabalho",
+      "label": "💼 Trabalho/Tarefa",
+      "xp": 12,
+      "keywords": ["trabalho", "tarefa", "entregar", "projeto", "relatório", "trabalhar"]
+    },
+    {
+      "id": "exercicio",
+      "label": "🏋️ Exercício",
+      "xp": 14,
+      "keywords": ["treinar", "academia", "corrida", "exercício", "flexão", "yoga", "treino"]
+    },
+    {
+      "id": "leitura",
+      "label": "📖 Leitura",
+      "xp": 10,
+      "keywords": ["ler", "leitura", "livro", "capítulo"]
+    },
+    {
+      "id": "organizacao",
+      "label": "🧹 Organização",
+      "xp": 8,
+      "keywords": ["organizar", "arrumar", "limpar", "planejar", "planejamento"]
+    },
+    {
+      "id": "lazer",
+      "label": "🎮 Lazer",
+      "xp": 4,
+      "keywords": ["jogar", "jogo", "filme", "série", "netflix", "relaxar", "descansar"]
+    },
+    {
+      "id": "meta",
+      "label": "🎯 Meta/Projeto",
+      "xp": 12,
+      "keywords": ["meta", "objetivo", "projeto", "plano"]
+    },
+    {
+      "id": "outro",
+      "label": "🔎 Outro",
+      "xp": 6,
+      "keywords": []
+    }
+  ],
+
+  "negative": {
+    "id": "negativo",
+    "label": "⚠️ Atividade prejudicial detectada",
+    "xpPenalty": -10,
+    "prohibitedWords": [
+      "bater punheta",
+      "punheta",
+      "masturba",
+      "pornografia",
+      "droga",
+      "maconha",
+      "cigarro",
+      "alcool",
+      "álcool",
+      "suicídio",
+      "autolesão",
+      "cortar"
+    ]
+  }
+}

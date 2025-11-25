@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MindFocus — Treinador de Foco</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">MindFocus</div>
+    <div class="xp-box">
+      <div id="xp-bar" class="xp-bar"><div id="xp-fill" class="xp-fill"></div></div>
+      <div id="level-text" class="level-text">Nível 1 • 0 XP</div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="panel new-entry">
+      <h2>Registrar atividade</h2>
+      <input id="input-title" type="text" placeholder="Ex: Estudar cálculo — capítulo 3" />
+      <select id="input-type">
+        <option value="">Detectar automaticamente (recomendado)</option>
+        <option value="estudo">📚 Estudo</option>
+        <option value="trabalho">💼 Trabalho/Tarefa</option>
+        <option value="exercicio">🏋️ Exercício</option>
+        <option value="leitura">📖 Leitura</option>
+        <option value="lazer">🎮 Lazer</option>
+        <option value="organizacao">🧹 Organização</option>
+        <option value="meta">🎯 Meta/Projeto</option>
+        <option value="outro">🔎 Outro</option>
+      </select>
+
+      <div class="row">
+        <button id="btn-add" class="btn primary">Adicionar</button>
+        <button id="btn-clear" class="btn ghost">Limpar sessão</button>
+      </div>
+
+      <div id="feedback" class="feedback"></div>
+    </section>
+
+    <section class="panel suggestions">
+      <h3>Classificação & Sugestão</h3>
+      <div id="classification" class="bubble">Nenhuma atividade analisada ainda.</div>
+      <div id="suggestion" class="hint">As sugestões aparecerão aqui.</div>
+    </section>
+
+    <section class="panel history">
+      <h3>Atividades da Sessão</h3>
+      <div id="list" class="list">
+        <div class="empty">Nenhuma atividade — adicione a primeira!</div>
+      </div>
+    </section>
+
+    <!-- GUIA DE PRODUTIVIDADE -->
+    <section class="panel productivity">
+      <h3>Guia de Produtividade</h3>
+
+      <div class="prod-card" id="open-pomodoro">
+        <h4>🍅 Técnica Pomodoro</h4>
+        <p>Ciclos de 25min de foco + 5min de pausa.</p>
+      </div>
+
+      <div class="prod-card" id="open-frog">
+        <h4>🐸 Eat That Frog</h4>
+        <p>Faça primeiro a tarefa mais difícil do dia.</p>
+      </div>
+
+      <div class="prod-card" id="open-eisenhower">
+        <h4>🧭 Matriz de Eisenhower</h4>
+        <p>Organize tarefas por urgência e importância.</p>
+      </div>
+
+      <div class="prod-card" id="open-2min">
+        <h4>⏱ Regra dos 2 minutos</h4>
+        <p>Se dá pra fazer rápido, faça agora.</p>
+      </div>
+    </section>
+
+    <!-- MODAL POMODORO -->
+    <div id="modal-pomodoro" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-modal" id="close-pomodoro">✕</button>
+        <h2>🍅 Técnica Pomodoro</h2>
+        <p>A Técnica Pomodoro usa ciclos curtos de foco para melhorar o rendimento.</p>
+
+        <h3>Como funciona:</h3>
+        <ul>
+          <li>25 minutos de foco.</li>
+          <li>5 minutos de pausa.</li>
+          <li>A cada 4 ciclos, pausa maior.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MODAL FROG -->
+    <div id="modal-frog" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-modal" id="close-frog">✕</button>
+        <h2>🐸 Eat That Frog</h2>
+        <p>Faça a tarefa mais chata/difícil logo de manhã.</p>
+
+        <h3>Passos:</h3>
+        <ul>
+          <li>Liste suas tarefas.</li>
+          <li>Escolha a mais importante.</li>
+          <li>Faça ela primeiro.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MODAL EISENHOWER -->
+    <div id="modal-eisenhower" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-modal" id="close-eisenhower">✕</button>
+        <h2>🧭 Matriz de Eisenhower</h2>
+        <p>Classifique suas tarefas por importância e urgência.</p>
+
+        <h3>Os 4 quadrantes:</h3>
+        <ul>
+          <li>Urgente + Importante → faça agora</li>
+          <li>Importante + Não urgente → agende</li>
+          <li>Urgente + Não importante → delegue</li>
+          <li>Não urgente + Não importante → elimine</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MODAL 2 MINUTOS -->
+    <div id="modal-2min" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-modal" id="close-2min">✕</button>
+        <h2>⏱ Regra dos 2 minutos</h2>
+        <p>Se levar menos de 2 min para fazer, faça agora.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <small>MindFocus — Imersão Alura · Pedro Arthur</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
